@@ -12,5 +12,5 @@
                 <a href="#" class="px-[40px] py-[26px] bg-[#F7752A] text-white font-bold uppercase rounded-full">Получить консультацию</a>
             </div>
         </div>
-    </x-container>git branch -M main
+    </x-container>
 </section>
