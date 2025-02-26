@@ -3,11 +3,18 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function post()
+    {
+        $posts = Post::where('is_verificate', true)->get();
+        return view('web.pages.home.index', ['posts'=>$posts,]);
+    }
+
     public function index()
     {
         $setting = Setting::latest()->first();
@@ -19,8 +26,8 @@ class HomeController extends Controller
             'meta_keywords' => $setting->meta_keywords,
             'meta_og_title' => $setting->meta_title,
             'meta_og_description' => $setting->meta_description,
-            
+
         ];
-        return view('web.pages.home.index', $data);
+        return view('web.pages.home.index', $data,);
     }
 }

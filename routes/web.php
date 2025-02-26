@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\Pages\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::controller(HomeController::class)->group(function() {
+Route::controller(HomeController::class)->group(callback: function() {
     Route::get('/', 'index')->name('page.home');
+    Route::get('/', 'post')->name('page.home');
 });
 
 // Обычный пользователь role === 1

@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body class="text-base font-normal bg-green-700 text-gray-950 max-w-screen">
+<body class="text-base font-normal bg-white text-gray-950 max-w-screen">
     @include('layouts.partials.header')
     {{ $slot }}
 </body>
