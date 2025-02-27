@@ -19,6 +19,7 @@
 <body class="text-base font-normal bg-white text-gray-950 max-w-screen">
     @include('layouts.partials.header')
     {{ $slot }}
+    @include('layouts.partials.footer')
 </body>
 
 </html>
