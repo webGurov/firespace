@@ -3,9 +3,9 @@
         <h2 class="text-[42px] font-bold">Посты</h2>
         <div class="flex mt-[20px] gap-[30px]">
             @foreach ($posts as $post)
-                <div aria-label="Пост" class="w-[300px] flex flex-col border-2 border-[#F7752A] rounded-[10px] p-[10px] ">
-                    <h3 class="text-[30px] font-bold"> {{ $post->title }} </h3>
-                    <p class=""> {{ $post->description }} </p>
+                <div aria-label="Пост" class="w-[300px] h-[100px] flex flex-col border-2 border-[#EA8C55] rounded-[10px] p-[10px] bg-[#DB5A42]">
+                    <h3 class="text-[30px] font-bold text-white"> {{ $post->title }} </h3>
+                    <p class="text-white/70"> {{ $post->description }} </p>
                 </div>
             @endforeach
         </div>
