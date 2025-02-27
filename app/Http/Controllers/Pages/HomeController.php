@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Setting;
+use App\Models\Social;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,6 +18,13 @@ class HomeController extends Controller
 
     public function index()
     {
+        $social = Social::latest()->first();
+        $networks = [
+            'vk' => $social->vk,
+            'tg' => $social->tg,
+            'inst' => $social->inst,
+        ];
+
         $setting = Setting::latest()->first();
         $data = [
             'title' => 'Главная страница',
@@ -28,6 +36,6 @@ class HomeController extends Controller
             'meta_og_description' => $setting->meta_description,
 
         ];
-        return view('web.pages.home.index', $data,);
+        return view('web.pages.home.index', $data, $networks);
     }
 }

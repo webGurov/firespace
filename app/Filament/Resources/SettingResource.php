@@ -43,7 +43,7 @@ class SettingResource extends Resource
                         Tab::make('Информация')->schema([
                             TextInput::make('name')
                                 ->label('Название сайта')
-                                ->placeholder('EcoCrop')
+                                ->placeholder('ПитерКамин')
                                 ->required(),
                             Textarea::make('description')
                                 ->label('Описание сайта')
